@@ -11,3 +11,5 @@ This update contains:
 
 Website is static and does not require paid hosting. Do not upload Android app source, keystores or credentials to this repository.
 The app is labeled CLOSED BETA; no unverified public Play Store URL is included.
+
+NEW: Scroll-triggered fade/slide reveals, staggered cards, subtle floating phone previews, hover lift, reduced-motion support.

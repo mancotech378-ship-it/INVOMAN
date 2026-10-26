@@ -94,3 +94,20 @@ body.landing .maker-logo{flex-shrink:0}
  .chip-top{right:0;top:0}.chip-bottom{bottom:0}
  .btn{padding:12px 15px;font-size:12px}
 }
+
+
+/* Progressive scroll effects: visible by default; enhanced only with JS. */
+html{scroll-behavior:smooth;scroll-padding-top:88px}
+@media (prefers-reduced-motion: no-preference){
+ .motion-ready .reveal{opacity:0;transform:translate3d(0,28px,0);transition:opacity .75s ease,transform .75s cubic-bezier(.2,.75,.25,1);transition-delay:var(--reveal-delay,0ms);will-change:opacity,transform}
+ .motion-ready .reveal.is-visible{opacity:1;transform:translate3d(0,0,0);will-change:auto}
+ .motion-ready .reveal.from-left{transform:translate3d(-30px,0,0)}
+ .motion-ready .reveal.from-right{transform:translate3d(30px,0,0)}
+ .motion-ready .reveal.from-left.is-visible,.motion-ready .reveal.from-right.is-visible{transform:translate3d(0,0,0)}
+ .feature-card,.screen-card{transition:transform .35s ease,box-shadow .35s ease}
+ .feature-card:hover,.screen-card:hover{transform:translateY(-7px)}
+ .hero-art .phone-main{animation:heroFloat 7s ease-in-out infinite}
+ .hero-art .phone-side{animation:heroFloat 8s ease-in-out infinite reverse}
+ @keyframes heroFloat{0%,100%{translate:0 0}50%{translate:0 -10px}}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
