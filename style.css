@@ -12,3 +12,85 @@
 .footer-maker-logo{display:block;width:125px;height:auto;margin:18px 0 10px;border-radius:10px;background:#fff}
 @media(max-width:900px){.maker-logo{width:80px;height:45px}.developer-card{grid-template-columns:1fr}.developer-logo{max-width:230px}}
 @media(max-width:440px){.maker-logo{width:66px;height:40px;padding:2px}.developer-card{border-radius:22px}}
+
+/* Responsive alignment patch — 2026-10-26 */
+html{scroll-padding-top:90px}
+body.landing .wrap{width:min(1180px,calc(100% - 48px))}
+body.landing .header-inner{min-width:0;gap:18px}
+body.landing .brand-link{flex-shrink:0;white-space:nowrap}
+body.landing .site-nav{margin-left:auto;gap:clamp(10px,1.35vw,22px)}
+body.landing .site-nav a{font-size:12px}
+body.landing .maker-logo{flex-shrink:0}
+.hero{grid-template-columns:minmax(0,1.04fr) minmax(0,.96fr);gap:clamp(20px,3vw,48px)}
+.hero-copy,.hero-art,.why-copy,.developer-card>div{min-width:0}
+.hero h1{font-size:clamp(40px,4.8vw,68px);overflow-wrap:normal}
+.hero-art{width:100%;min-width:0;isolation:isolate}
+.hero-glow{max-width:100%}
+.phone{aspect-ratio:9/16;height:auto;box-sizing:border-box}
+.phone-main{width:clamp(185px,20vw,238px);right:12%}
+.phone-side{width:clamp(146px,16vw,185px);left:4%;top:90px}
+.phone img,.screen-phone img{object-fit:fill}
+.screen-phone{aspect-ratio:9/16;width:200px;height:auto;box-sizing:border-box}
+.screen-card{min-width:0}
+.gallery-track{overscroll-behavior-inline:contain}
+.why-section{gap:clamp(25px,5vw,75px)}
+.download-panel>div{min-width:0}
+.download-panel h2{overflow-wrap:break-word}
+.footer-bottom{gap:18px;flex-wrap:wrap}
+@media(max-width:1180px){
+ body.landing .header-inner{gap:13px}
+ body.landing .maker-logo{display:none}
+ body.landing .site-nav{gap:13px}
+}
+@media(max-width:860px){
+ body.landing .site-nav{display:none;position:absolute;top:70px;left:0;right:0;margin:0;padding:20px 24px;background:white;box-shadow:0 20px 30px #16265a1b;flex-direction:column;align-items:stretch;gap:18px}
+ body.landing .site-nav.open{display:flex}
+ body.landing .menu-toggle{display:block;margin-left:auto}
+ body.landing .header-inner{height:70px}
+ .hero{grid-template-columns:minmax(0,1fr);gap:12px;padding-top:55px;padding-bottom:65px}
+ .hero-copy{max-width:660px;margin-inline:auto;text-align:center}
+ .hero-desc{margin-inline:auto}
+ .hero-actions,.hero-trust{justify-content:center}
+ .hero-art{max-width:550px;height:510px;margin:15px auto 0}
+ .phone-main{width:220px;right:15%}
+ .phone-side{width:175px;left:9%;top:80px}
+ .chip-top{right:2%}.chip-bottom{left:3%}
+ .why-section{grid-template-columns:1fr;gap:34px}
+ .why-art{max-width:640px;width:100%;margin:auto}
+}
+@media(max-width:600px){
+ body.landing .wrap{width:calc(100% - 32px)}
+ .hero{padding-top:38px;padding-bottom:44px}
+ .hero h1{font-size:clamp(36px,9vw,52px);letter-spacing:-.045em;margin:22px 0 14px}
+ .hero-desc{font-size:15px;line-height:1.7}
+ .hero-art{height:410px;max-width:400px;margin-top:22px}
+ .phone{border-width:6px;border-radius:26px}
+ .phone-main{width:min(49%,190px);right:11%}
+ .phone-side{width:min(38%,145px);left:7%;top:60px}
+ .floating-chip{font-size:10px;padding:9px 11px}
+ .chip-top{top:12px;right:0}
+ .chip-bottom{bottom:8px;left:0}
+ .hero-glow{width:100%;height:350px}
+ .section{padding-top:58px;padding-bottom:58px}
+ .section-heading{margin-bottom:30px}
+ .section-heading h2,.why-copy h2{font-size:clamp(29px,8vw,40px)}
+ .strip-inner{gap:10px 18px;text-align:center;justify-content:center}
+ .screen-card{flex:0 0 185px}
+ .screen-phone{width:166px}
+ .gallery-track{gap:12px}
+ .why-art{height:300px;border-radius:24px}
+ .why-art img{width:150px;height:150px;border-radius:32px}
+ .orbit-label.top{right:20px}.orbit-label.bottom{left:20px}
+ .developer-card{padding:24px;gap:22px}
+ .download-panel{padding:32px 23px;border-radius:23px}
+ .download-panel h2{font-size:clamp(28px,8vw,40px)}
+ .footer-bottom{display:flex;flex-direction:column;gap:5px}
+}
+@media(max-width:380px){
+ .brand-link{font-size:19px}
+ .hero-art{height:360px}
+ .phone-main{width:174px;right:5%}
+ .phone-side{width:133px;left:1%;top:55px}
+ .chip-top{right:0;top:0}.chip-bottom{bottom:0}
+ .btn{padding:12px 15px;font-size:12px}
+}
